@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Video</title>
+		<link rel="stylesheet" href="css/Video.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="Background"></div>
+		<video id="myVidio" src="mp4/蓦然回首.mp4" controls=""></video>
+		
+		<div class="des" id="vTitle">慕然回首</div>
+		<div class="content">
+			<ul>
+				<li data-src="mp4/蓦然回首.mp4" data-tt = "蓦然回首" class="active"> <img src="img/蓦然回首.jpg"/></li>
+				<li data-src = "mp4/再见绘梨.mp4" data-tt = "再见绘梨"> <img src="img/再见绘梨.jpg"/> </li>
+				<li data-src = "mp4/虎狼来.mp4" data-tt = "虎狼来"> <img src="img/虎狼来.jpg"/> </li>
+				<li data-src="mp4/天堂之吻.mp4" data-tt = "天堂之吻"> <img src="img/天堂之吻.jpg"/> </li>
+			</ul>
+		</div>
+	</body>
+	
+	
+<script type="text/javascript">
+	var list = document.querySelectorAll("li");
+	var myVidio = document.getElementById("myVidio");
+	var vTitle = document.getElementById("vTitle");
+	
+	for (let i = 0; i < list.length; i++) {
+	    list[i].addEventListener("click", function() {
+	
+	        // 切换 active
+	        document.querySelector(".active")?.classList.remove("active");
+	        this.classList.add("active");
+	
+	        // 切换视频和标题
+	        myVidio.src = this.dataset.src;
+	        vTitle.textContent = this.dataset.tt;
+	    });
+	}
+</script>
+</html>

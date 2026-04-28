@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Music</title>
+		<link rel="stylesheet" href="css/Music.css" />
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="Background"></div><!-- 背景 -->
+		<div class="PlayList">
+			<div class="title">Play List</div>
+			<ul>
+				<li data-src="mp3/Girls band cry.mp3" data-cover="img/Girls band cry.jpg" class="active">Girls band cry</li>
+				<li data-src="mp3/My Jealousy.mp3" data-cover="img/My jealousy.jpg"> My Jealousy</li>
+				<li data-src="mp3/Luna say maybe.mp3" data-cover="img/Luna say maybe.jpg">Luna say maybe</li>
+			</ul>
+		</div>
+		<div class="coverlay"></div><!-- 遮罩 -->
+		<div>
+			<img src="img/Girls band cry.jpg" class="cover" />
+		</div>
+		<div class="duration">
+			<audio id="audio" src="mp3/My Jealousy.mp3" controls></audio>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		const audio = document.getElementById("audio");
+		const cover = document.querySelector(".cover");
+		const list = document.querySelectorAll("li");
+
+		for (let i = 0; i < list.length; i++) {
+			list[i].addEventListener("click", function() {
+				// 切换 active
+				document.querySelector(".active")?.classList.remove("active");
+				this.classList.add("active");
+
+				// 切换音频
+				audio.src = this.dataset.src;
+				// 切换封面
+				cover.src = this.dataset.cover;
+				// 播放
+				audio.play();
+			});
+		}
+	</script>
+
+</html>

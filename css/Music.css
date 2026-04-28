@@ -1,0 +1,181 @@
+/* 背景 */
+.Background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: #E3DFA8;
+}
+
+/*PC*/
+@media (min-width: 601px){
+/* 遮罩 */
+.coverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: url(../img/pc-music-bg.PNG);
+    background-size: cover;
+    pointer-events: none;/*点击穿透，不影响鼠标与下一层的元素交互*/
+}
+
+/* 进度条 */
+.duration {
+    position: absolute;
+    bottom: 280px;
+    right: 100px;
+    width: 620px;
+	z-index: 4;
+
+}
+audio {
+    width: 100%;
+}
+.cover {
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: 80px solid #333;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+	z-index: 5;
+	
+}
+/* 播放列表 */
+.PlayList {
+    position: absolute;
+    width: 720px;
+    height: 340px;
+    top: 110px;
+    left: 30px;
+    background: rgba(61, 66, 148, 0.8);
+	box-shadow: 0 40px 40px rgba(0,0,0,0.4);
+    border-radius: 16px;
+    padding: 20px;
+	z-index: 2;
+	
+}
+
+/* 标题 */
+.title {
+    font-size: 30px;
+    color: #e8f5e9;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    height: 240px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f2eb93;
+
+}
+
+/* 鼠标划过效果 */
+li:hover {
+    background: rgba(173, 167, 89, 0.4);
+    cursor: pointer;
+}
+
+.active {
+    background: linear-gradient(90deg, #e2d967, #efe78f);
+    color: #1b3a1b;
+    font-weight: bold;
+}
+}
+
+
+/*手机端布局*/
+@media (max-width: 600px){
+/* 遮罩 */
+.coverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: url(../img/androw-music-bg.PNG);
+    background-size: cover;
+	background-position: center center;
+}
+
+/* 进度条 */
+.duration {
+    position: absolute;
+    bottom: 380px;
+    left: 50px;
+    width: 400px;
+	
+	z-index: 5;
+	
+}
+audio {
+    width: 100%;
+}
+.cover {
+	position: absolute;
+	top: 152px;
+	right: 90px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 55px solid #333;
+	
+	z-index: 2;
+	
+}
+
+/* 播放列表 */
+.PlayList {
+    position: absolute;
+    width: 400px;
+    height: 280px;
+    bottom: 50px;
+    left: 30px;
+    background: rgba(61, 66, 148, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+	
+	z-index: 4;
+	
+}
+/* 标题 */
+.title {
+    font-size: 25px;
+    color: #e8f5e9;
+    margin-bottom: 20px;
+}
+/* 列表容器 */
+ul {
+    margin: 0;
+    padding: 0;
+    height: 240px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 15px 17px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f2eb93;
+}
+
+/* 鼠标划过效果 */
+li:hover {
+    background: rgba(173, 167, 89, 0.4);
+    cursor: pointer;
+}
+.active {
+    background: linear-gradient(90deg, #e2d967, #efe78f);/*线性渐变*/
+    color: #1b3a1b;
+    font-weight: bold;
+}
+}

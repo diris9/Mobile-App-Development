@@ -1,0 +1,108 @@
+/*PC*/
+@media (min-width: 601px){
+.Background{
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: url("../img/login-bg-1.png");
+	background-size: cover;
+	pointer-events: none;
+}
+
+form{
+	width: 500px;
+	height: 600px;
+	background: rgba(225,225,225,0.8);
+	position: absolute;/*绝对定位*/
+	z-index: 2;
+	top: 130px;
+	left: 150px;
+	padding-top: 50px;/*顶部的内边距为50px*/
+	border-radius: 20px;/*圆角为20px*/
+
+}
+
+input{
+	width: 400px;
+	height: 60px;
+	display: block;/*让其以div块的形式显示*/
+	margin: 20px auto;/*外边距，上下为20px，左右自动计算*/
+	border-radius: 20px;/*圆角为20px*/
+	text-indent: 20px;/*文本缩进*/
+	background: rgba(255,255,255,0.5);
+	border: none;/*去掉边框*/
+}
+
+button{
+	width: 410px;
+	height: 50px;
+	display: block;/*让其以div块的形式显示*/
+	margin: 20px auto;/*边距，上下为20px，左右自动计算*/
+	border-radius: 20px;/*圆角为20px*/
+	border: none;/*去掉边框*/
+	font-size: 20px;/*字体大小*/
+	color: ;/*字体颜色*/
+	background: #a1af3f;
+}
+button:hover {
+	transform: translateY(-5px);
+	transition: 0.25s;
+    background: rgba(216,27,96,0.7);
+    cursor: pointer;
+}
+}
+
+
+/*手机端布局*/
+@media (max-width: 600px){
+.Background{
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: url("../img/login-bg-1.png");
+	background-size: cover;
+	pointer-events: none;
+}
+
+form{
+	width: 400px;
+	height: 600px;
+	background: rgba(225,225,225,0.8);
+	position: absolute;/*绝对定位*/
+	z-index: 2;
+	top: 130px;
+	left: 60px;
+	padding-top: 50px;/*顶部的内边距为50px*/
+	border-radius: 20px;/*圆角为20px*/
+
+}
+
+input{
+	width: 320px;
+	height: 60px;
+	display: block;/*让其以div块的形式显示*/
+	margin: 20px auto;/*外边距，上下为20px，左右自动计算*/
+	border-radius: 20px;/*圆角为20px*/
+	text-indent: 20px;/*文本缩进*/
+	background: rgba(255,255,255,0.5);
+	border: none;/*去掉边框*/
+}
+
+button{
+	width: 330px;
+	height: 50px;
+	display: block;/*让其以div块的形式显示*/
+	margin: 20px auto;/*边距，上下为20px，左右自动计算*/
+	border-radius: 20px;/*圆角为20px*/
+	border: none;/*去掉边框*/
+	font-size: 18px;/*字体大小*/
+	color: ;/*字体颜色*/
+	background: #a1af3f;
+}
+button:hover {
+	transform: translateY(-5px);
+	transition: 0.25s;
+    background: rgba(216,27,96,0.7);
+    cursor: pointer;
+}
+}
